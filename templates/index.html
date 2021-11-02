@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>💛 Little Posts</title>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway" rel="stylesheet">
+    <link rel="stylesheet" href="../static/css/styles.css">
+</head>
+<body>
+<div class="wrapper">
+    <div class="top">
+        <div class="title"><h1>Bijou Blog</h1></div>
+    </div>
+
+    {% for post in allposts: %}
+    <div class="content">
+        <div class="card">
+
+            <h2>{{post.title}}</h2>
+            <p>{{post.subtitle}}</p>
+            <a href="{{url_for('openpost',id=post.id)}}">Read This Post</a>
+        </div>
+    </div>
+    {% endfor %}
+<!--    <div class="content">-->
+<!--        <div class="card">-->
+<!--            <h2>Another blog post</h2>-->
+<!--            <p class="text">Lorem ipsum dolor sit </p>-->
+<!--            <a href="#">Read</a>-->
+<!--        </div>-->
+<!--    </div>-->
+</div>
+</body>
+<footer>
+    <p>Made with ❤️ by Keerthi.</p>
+</footer>
+</html>
